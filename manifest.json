@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Browser Tracking",
+  "description": "This extension displays the amount of time spent on Social Networking Websites.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "background": {
+      "scripts": ["background.js"]
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "https://ajax.googleapis.com/"
+  ]
+}
