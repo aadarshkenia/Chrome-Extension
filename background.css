@@ -1,0 +1,22 @@
+html { 
+	height: 100% 
+}
+title{
+	height: 100%
+}
+body { 
+	height: 100%; 
+	margin: 0; 
+	padding: 0;
+	background-color: #dcdcdc 
+}
+
+
+div.title-name { 
+	font-size: 25px;  
+	text-align: center; 
+	color: #ffffff ; 
+	background-color: #5a5a5a; 
+	padding-top: 25px; 
+	padding-bottom: 25px
+}

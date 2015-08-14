@@ -1,11 +1,25 @@
 <html>
   <head>
-    <title>Browser Tracking Extension's Popup</title>
-    <script src="display.js" defer></script>
-  </head>
- 
-  <body>
-      <div id="display"></div>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="display.js"></script>
+    <script type="text/javascript">
+     
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      /*
+      //Set up content listener here
+      chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
+        var message = request.greeting;
+        console.log("Message received: "+message);
+        document.getElementById("check").textContent = message;
+        sendResponse({farewell: "BYE"});  
+    });     */ 
       
+    drawchart();
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+    <div id = "check">HI</div>
   </body>
 </html>

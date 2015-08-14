@@ -1,5 +1,16 @@
 
 
+
+
+//Add listener for displaying stats to user
+chrome.browserAction.onClicked.addListener(function onClick(tab){
+    var create_filter={url: "display.html", active:true};
+    chrome.tabs.create(create_filter);    
+    
+});
+
+
+
 //Mappings from tabId to url
 var mappings = {};
 
