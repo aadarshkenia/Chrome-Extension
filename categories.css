@@ -1,0 +1,23 @@
+div.add_category{
+    padding: 25px;
+}
+
+div.add_site{
+    padding: 25px;
+}
+
+div.remove_site{
+    padding: 25px;
+}
+
+div.display_category{
+    padding: 25px;
+}
+
+ul{
+    list-style-type: circle;
+}
+
+li{
+    padding-left: 20px;
+}

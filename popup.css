@@ -1,9 +1,16 @@
-button{
-	padding: 10px;
+#btn_categories{
+    padding: 5px;        
+}
+
+#btn_projects{
+    padding: 5px;
 }
 
 body{
 	min-width: 300px;
-	min-height: 300px
+	min-height: 300px;
 }
 
+#btn_stats{
+    padding: 5px;    
+}

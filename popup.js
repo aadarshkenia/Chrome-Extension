@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
 
-	display_projects();
+	//display_projects();
 	document.getElementById("btn_categories").addEventListener("click", function (e) {
 		
 		var create_filter={url: chrome.extension.getURL("categories.html"), active:true};
@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', function(){
 		chrome.tabs.create(create_filter);
 			
 	});
+        
+        document.getElementById("btn_stats").addEventListener("click", function(e){
+                chrome.tabs.create({url: "stats.html", active: true});
+        });
 
 });
 
@@ -40,9 +44,9 @@ function display_projects(){
     			var item = json_deliverables[i];
     			
     			var para = document.createElement("p");
-			    var node = document.createTextNode(item);
-			    para.appendChild(node);
-			    document.body.appendChild(para);
+                        var node = document.createTextNode(item);
+                        para.appendChild(node);
+                        document.body.appendChild(para);
     		
     		}    		
     	}

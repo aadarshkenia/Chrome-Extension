@@ -2,11 +2,33 @@
 <html>
 <head>
 	<title>Add Categories Page</title>
-	<link padding="25px" rel="stylesheet" type="text/css" href="background.css">
+	<link rel="stylesheet" type="text/css" href="background.css">
+        <link rel="stylesheet" type="text/css" href="categories.css">
 </head>
 <body >
 	<div class="title-name">TIME TRACKER</div>
-	<button id="btn_new_category">Add New Category</button>	
-	<input id="text_new_category" type="text" placeholder="New Category Name"></div>
+        <div class="add_category">
+            <p>ADD A CATEGORY</p>	
+            <input id="text_new_category" type="text" placeholder="New Category Name">
+            <button id="btn_new_category">Submit</button>
+        </div>
+            
+        <div class="add_site">
+            <p>ADD A SITE TO TRACK</p>	
+            <input id="text_new_site" type="text" placeholder="New Website Name">
+            <select id="category_dropdown"></select>
+            <button id="btn_new_site">Submit</button>
+        </div>
+            
+        <div class="remove_site">
+            <p>REMOVE A TRACKED SITE</p>	
+            <select id="site_dropdown"></select>
+            <button id="btn_remove_site">Remove</button>
+        </div>
+        
+        <div class="display_category" id="display_category"> 
+            <p>TRACKED CATEGORIES:</p>
+        </div>
+        <script type="text/javascript" src="categories.js"></script>
 </body>
 </html>

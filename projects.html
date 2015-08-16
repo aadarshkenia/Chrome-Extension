@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Categories Page</title>
+	<link rel="stylesheet" type="text/css" href="background.css">
+        <link rel="stylesheet" type="text/css" href="projects.css">
+</head>
+<body >
+	<div class="title-name">TIME TRACKER</div>
+        
+        <div class="track_project">
+            <p>SELECT A PROJECT TO TRACK</p><br/>	
+            <select id="project_dropdown"></select>
+            <button id="btn_track_project">Select</button>
+        </div>  
+        <div class="add_project">
+            <p>ADD A PROJECT</p><br/>	
+            <input id="text_new_category" type="text" placeholder="New Project Name"><br/>
+            <input id="text_new_deliverable" type="text" placeholder="New Deliverable Name"><br/>
+            <button id="btn_new_project">Submit</button>
+        </div>            
+        
+        <div class="remove_project">
+            <p>REMOVE A PROJECT</p><br/>	
+            <select id="project_dropdown"></select>
+            <button id="btn_remove_project">Remove</button>
+        </div>       
+        
+        <script type="text/javascript" src="projects.js"></script>
+</body>
+</html>
