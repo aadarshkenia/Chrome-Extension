@@ -10,19 +10,24 @@
         
         <div class="track_project">
             <p>SELECT A PROJECT TO TRACK</p><br/>	
-            <select id="project_dropdown"></select>
+            <select id="change_project_dropdown"></select>
             <button id="btn_track_project">Select</button>
         </div>  
         <div class="add_project">
             <p>ADD A PROJECT</p><br/>	
-            <input id="text_new_category" type="text" placeholder="New Project Name"><br/>
-            <input id="text_new_deliverable" type="text" placeholder="New Deliverable Name"><br/>
+            <input id="text_new_project" type="text" placeholder="New Project Name">            
             <button id="btn_new_project">Submit</button>
-        </div>            
+        </div>      
+        <div class="add_deliverable">
+            <p>ADD A DELIVERABLE</p>
+            <input id="text_new_deliverable" type="text" placeholder="New Deliverable Name">
+            <select id="add_deliverable_project_dropdown"></select>
+            <button id="btn_new_deliverable">Submit</button>
+        </div>
         
         <div class="remove_project">
             <p>REMOVE A PROJECT</p><br/>	
-            <select id="project_dropdown"></select>
+            <select id="remove_project_dropdown"></select>
             <button id="btn_remove_project">Remove</button>
         </div>       
         

@@ -1,5 +1,11 @@
+div.track_project{
+    padding: 25px;
+}
 div.add_project{
     padding: 25px;    
+}
+div.add_deliverable{
+    padding: 25px;
 }
 div.remove_project{
     padding: 25px;
