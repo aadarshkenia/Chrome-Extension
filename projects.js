@@ -65,7 +65,7 @@ function init_deliverable(deliv, proj){
     var darr = [];
     darr.push(DEFAULT_STATUS);//status
     darr.push(DEFAULT_LAT);//last access time
-    darr.push(DEFAULT_STATUS);//total duration
+    darr.push(DEFAULT_DUR);//total duration
     setArray(dname, darr);
 }
 

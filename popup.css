@@ -11,6 +11,12 @@ body{
 	min-height: 300px;
 }
 
-#btn_stats{
+#btn_productivity_stats{
     padding: 5px;    
+}
+
+#btn_export_stats{
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
 }

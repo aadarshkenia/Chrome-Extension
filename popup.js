@@ -1,16 +1,15 @@
 document.addEventListener('DOMContentLoaded', function(){
 
 	display_curr_proj();
-	//var temp = getArray("Test1.D1");
-        //if(temp)
-        //    alert(temp[0]);
+        //Handler for editing categories
         document.getElementById("btn_categories").addEventListener("click", function (e) {
 		
 		var create_filter={url: chrome.extension.getURL("categories.html"), active:true};
 		chrome.tabs.create(create_filter);
 			
 	});
-
+        
+        //Handler for editing projects
 	document.getElementById("btn_projects").addEventListener("click", function (e) {
 		
 		var create_filter={url: chrome.extension.getURL("projects.html"), active:true};
@@ -18,12 +17,19 @@ document.addEventListener('DOMContentLoaded', function(){
 			
 	});
         
+        //Hander for display productivity stats
         document.getElementById("btn_productivity_stats").addEventListener("click", function(e){
                 chrome.tabs.create({url: "stats.html", active: true});
         });
+        
+        //Handler for exporting data
+        document.getElementById("btn_export_stats").addEventListener("click", export_data());
 
 });
 
+function export_data(){
+    
+}
 
 function display_curr_proj(){
 	
@@ -54,7 +60,7 @@ function display_deliverable(d_name, p_name){
     else{
         var item = document.createElement("li");
         var text_el = document.createElement("p");
-        text_el.innerHTML  = d_name;
+        text_el.innerHTML  = d_name + "<br/>Time Spent: "+msToTime(d_arr[2]);
         var button_el = document.createElement("button");
         button_el.innerHTML=toggle(d_arr[0]);
         button_el.setAttribute("id",name);
@@ -107,4 +113,14 @@ function getArray(key){
 //Set array to localStorage after serialization
 function setArray(key, arr){
     localStorage.setItem(key, JSON.stringify(arr));
+}
+
+function msToTime(duration) {
+    var minutes = parseInt((duration/(1000*60))%60);
+    var hours = parseInt((duration/(1000*60*60))%24);
+
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+
+    return hours + " hrs " + minutes + " mins";
 }
